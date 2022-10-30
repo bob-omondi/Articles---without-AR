@@ -19,11 +19,11 @@ def name
 end
 #Returns new instance of articles that knows it belongs to the author
 def new_article(title, magazine)
-  Article.new(title, magazine, self)
+  Article.new(self, magazine, title)
 end
 #Returns article that belongs to the author
 def articles
-  Article.all.select { |article| article.authors == self}
+  Article.all.select { |article| article.author == self}
 end
 #Author#topic_areas
 def topic_areas
