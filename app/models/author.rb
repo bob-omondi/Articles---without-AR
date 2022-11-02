@@ -18,20 +18,21 @@ def name
   "#{@first_name} #{@last_name}"
 end
 #Returns new instance of articles that knows it belongs to the author
-def new_article(title, magazine)
-  Article.new(self, magazine, title)
+def add_article(magazine, title)
+  Article.new(magazine, self, title)
 end
 #Returns article that belongs to the author
 def articles
-  Article.all.select { |article| article.author == self}
+  Article.all.select do |article|article.author.name == self.name
+  end
 end
 #Author#topic_areas
 def topic_areas
-  articles.map { |article| article.category}.uniq
+  @magazine.map {|magazine|magazine.category}.uniq
 end
 
-#Returns magazine that belongs to the article
-def magazines
-  articles.map(&:magazine)
-end
+#Returns magazine articles that belongs to the article
+def magazines 
+  self.articles.map { |article| article.magazine }.uniq
+  end
 end

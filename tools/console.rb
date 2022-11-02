@@ -9,10 +9,14 @@ end
 
 magazine1 = Magazine.new("magazine1", "category1")
 magazine2 = Magazine.new("magazine2", "category2")
-art1 = Article.new("article1", "author1", "magazine1")
-art2 = Article.new("article2", "author2", "magazine2")
-author1 = Author.new("author1")
-author2 = Author.new("author2")
+magazine3 = Magazine.new("magazine3", "category2")
+
+art1 = Article.new("author1",  "magazine1", "title1")
+art2 = Article.new("author2",  "magazine2", "title2")
+
+author1 = Author.new("Thierry Henry")
+author2 = Author.new("Steve Wozniak")
+author3 = Author.new("Bianca Glen")
       
 
 

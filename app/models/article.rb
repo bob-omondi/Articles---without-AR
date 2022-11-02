@@ -17,7 +17,5 @@ end
 def self.all
     @@all
 end
-# def self.all_articles
-#     self.all.map { |a| a.name}
-#   end
+
 end
