@@ -1,5 +1,5 @@
 class Magazine
-  attr_reader :name, :category
+  attr_accessor :name, :category
 
 @@all = []
   def initialize(name, category)
